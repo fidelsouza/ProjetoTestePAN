@@ -39,7 +39,7 @@ public class CadastrosController {
 	@GetMapping("/cliente")
 	ResponseEntity<Cliente> cliente(@RequestParam(value = "cpf", required = true) String cpf) {
 
-		Cliente cliente = cadastroService.findOneByCpf(cpf);
+		Cliente cliente = cadastroService.findOneByCpf(cpf); 
 
 		return ResponseEntity.status(HttpStatus.OK).body(cliente);
 	}
